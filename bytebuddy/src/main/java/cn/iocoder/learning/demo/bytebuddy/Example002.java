@@ -1,5 +1,6 @@
-package cn.iocoder.learning.bytebuddy;
+package cn.iocoder.learning.demo.bytebuddy;
 
+import cn.iocoder.learning.demo.Dog;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
 import net.bytebuddy.implementation.MethodDelegation;
@@ -10,6 +11,7 @@ public class Example002 {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException {
         Class dynamicType = new ByteBuddy()
                 .subclass(Dog.class)
+                .name("cn.iocoder.learning.autogen.DogClass")
                 .method(ElementMatchers.named("hello"))
                 .intercept(MethodDelegation.to(MyServiceInterceptor.class))
                 .make()

@@ -27,7 +27,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Premain-Class>cn.iocoder.learning.bytebuddy.Agent</Premain-Class>
+                    <Premain-Class>cn.iocoder.learning.demo.bytebuddy.Agent</Premain-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>

@@ -24,11 +24,20 @@
             <artifactId>byte-buddy</artifactId>
             <version>1.7.9</version>
         </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy-agent</artifactId>
+            <version>1.7.9</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.iocoder.learning</groupId>
+            <artifactId>common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
         <finalName>agent</finalName>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -46,14 +55,18 @@
                             <createSourcesJar>true</createSourcesJar>
                             <shadeSourcesContent>true</shadeSourcesContent>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
-                                        <Premain-Class>cn.iocoder.learning.bytebuddy.Agent</Premain-Class>
+                                        <Premain-Class>cn.iocoder.learning.demo.bytebuddy.Agent</Premain-Class>
                                     </manifestEntries>
                                 </transformer>
                             </transformers>
                             <artifactSet>
+                                <!--<includes>-->
+                                    <!--<include>javassist:javassist:jar:</include>-->
+                                    <!--<include>net.bytebuddy:byte-buddy:jar:</include>-->
+                                    <!--<include>net.bytebuddy:byte-buddy-agent:jar:</include>-->
+                                <!--</includes>-->
                                 <excludes>
                                     <exclude>com.lmax:*</exclude>
                                     <exclude>org.apache.httpcomponents:*</exclude>

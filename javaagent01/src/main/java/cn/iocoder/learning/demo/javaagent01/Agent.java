@@ -1,4 +1,4 @@
-package cn.iocoder.learning.javaagent01;
+package cn.iocoder.learning.demo.javaagent01;
 
 import java.lang.instrument.Instrumentation;
 

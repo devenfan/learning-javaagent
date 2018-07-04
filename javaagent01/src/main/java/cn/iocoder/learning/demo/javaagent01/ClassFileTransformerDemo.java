@@ -1,4 +1,4 @@
-package cn.iocoder.learning.javaagent01;
+package cn.iocoder.learning.demo.javaagent01;
 
 import java.io.File;
 import java.io.FileInputStream;

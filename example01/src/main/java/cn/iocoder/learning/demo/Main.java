@@ -1,4 +1,4 @@
-package cn.iocoder.learning;
+package cn.iocoder.learning.demo;
 
 public class Main {
 
